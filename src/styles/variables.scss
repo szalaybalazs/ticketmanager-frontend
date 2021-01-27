@@ -7,6 +7,15 @@ $code-font: 'Fira Code', monospace;
 
 // Colours
 $white: rgb(255, 255, 255);
-$grey: rgb(242, 243, 246);
+$grey: rgb(243, 245, 247);
 $darkgrey:#5e6c84;
-$black: rgb(21, 38, 66)
+$black: rgb(21, 38, 66);
+
+$todo: #B620E0;
+$inprogress: #FA6400;
+$completed: #44D7B6;
+
+
+// Dimensions
+$content-width: 960px;
+$max-content-width: calc(100vw - 48px);

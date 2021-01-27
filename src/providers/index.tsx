@@ -1,10 +1,11 @@
-import React, { Fragment } from 'react';
+import React from 'react';
+import { BrowserRouter as Router } from 'react-router-dom';
 
 const Providers: React.FunctionComponent = ({ children }) => {
   return (
-    <Fragment>
+    <Router>
       { children }
-    </Fragment>
+    </Router>
   );
 };
 

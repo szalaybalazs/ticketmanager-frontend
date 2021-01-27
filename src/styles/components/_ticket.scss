@@ -1,0 +1,14 @@
+div.ticket-wrapper {
+  margin: 4px;
+  margin-top: 0;
+  font-family: $title-font;
+  background-color: $white;
+  padding: 12px;
+  border-radius: 3px;
+  span {
+    display: block;
+  }
+  &.completed {
+    text-decoration: line-through;
+  }
+}

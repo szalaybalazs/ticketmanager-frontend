@@ -1,0 +1,61 @@
+@import 'ticket';
+
+$shadow-radius: 5px;
+$dot-diameter: 10px;
+div.list-wrapper {
+  height: 560px;
+  background: $grey;
+  border-radius: 5px;
+  display: flex;
+  flex-direction: column;
+  div.list-header-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 16px;
+    div.title {
+      height: 14px;
+      display: flex;
+      align-items: center;
+      div.status-dot {
+        width: $dot-diameter;
+        height: $dot-diameter;
+        background-color: $darkgrey;
+        border-radius: $dot-diameter;
+        margin-right: 12px;
+        display: none;
+        &.todo {
+          background-color: $todo;
+          box-shadow: 0 0 0 $shadow-radius rgba($todo, .2);
+        }
+        &.inprogress {
+          background-color: $inprogress;
+          box-shadow: 0 0 0 $shadow-radius rgba($inprogress, .2);
+        }
+        &.completed {
+          background-color: $completed;
+          box-shadow: 0 0 0 $shadow-radius rgba($completed, .2);
+        }
+      }
+    }
+    span {
+      font-size: 14px;
+      font-family: $title-font;
+      font-weight: 500;
+      color: $darkgrey;
+      line-height: 0;
+      &.title {
+        text-transform: uppercase;
+        display: flex;
+        align-items: center;
+      }
+      &.ticketnum {
+        font-size: 14px;
+        font-weight: 400;
+      }
+    }
+  }
+  div.tickets {
+    flex: 1;
+  }
+}

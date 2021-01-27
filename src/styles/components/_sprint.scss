@@ -1,0 +1,10 @@
+div.sprint-wrapper {
+  display: flex;  
+  margin: auto;
+  justify-content: space-between;
+  width: $content-width;
+  max-width: $max-content-width;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-gap: 24px;
+}

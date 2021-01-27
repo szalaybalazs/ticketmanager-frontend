@@ -1,16 +1,26 @@
 import React from 'react';
-import { iTicket } from 'types/ticket';
+import { Draggable } from 'react-beautiful-dnd';
 
+import { iTicket } from 'types/ticket';
 interface iTicketProps extends iTicket {
   lol?: number
 }
 
-const Ticket: React.FunctionComponent<iTicketProps> = ({ title, id }) => {
+const Ticket: React.FunctionComponent<iTicketProps> = ({ title, id, index, status }) => {
   return (
-    <div className="ticket-wrapper">
-      <span className="title">{ title }</span>
-      <span className="id">{ id }</span>
-    </div>
+    <Draggable draggableId={id} index={index}>{(provided) => {
+      return (
+        <div  
+          className={`ticket-wrapper ${status?.toLowerCase()}`}
+          ref={provided.innerRef}
+          {...provided.draggableProps}
+          {...provided.dragHandleProps}
+        >
+          <span className="title">{ title }</span>
+          <span className="id">{ id }</span>
+        </div>
+      );
+    }}</Draggable>
   );
 };
 

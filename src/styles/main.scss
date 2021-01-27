@@ -1,8 +1,12 @@
 @import 'variables';
 
+@import 'components/main';
+@import 'routes/main';
+
 html, body {
   margin: 0;
   padding: 0;
+  background-color: $white;
   *{
     font-family: $content-font;
     box-sizing: border-box;

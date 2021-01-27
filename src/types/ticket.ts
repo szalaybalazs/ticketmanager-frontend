@@ -1,7 +1,8 @@
-export type status = 'TODO' | 'INPROGRESS' | 'COMPLETED'
+export type status = 'BACKLOG' | 'TODO' | 'INPROGRESS' | 'COMPLETED'
 
 export interface iTicket {
   title: string
   id: string
+  index: number
   status: status | null
 }

@@ -1,0 +1,32 @@
+header {
+  background-color: $grey;
+  div.content {
+    width: $content-width;
+    max-width: $max-content-width;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    padding: 24px 0;
+    justify-content: space-between;
+    div.logo {
+      h1 {
+        font-family: $title-font;
+        font-size: 14px;
+        margin: 0;
+        font-weight: 500;
+        text-transform: uppercase;
+      }
+    }
+    div.links {
+      a {
+        font-size: 14px;
+        margin-left: 24px;
+        font-weight: 400;
+        font-family: $title-font;
+        color: $black;
+        text-decoration: none;
+        text-transform: uppercase;
+      }
+    }
+  }
+}
